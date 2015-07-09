@@ -1,0 +1,2 @@
+# incorporate as part of the ant build (https://maven.apache.org/ant-tasks/examples/install-deploy.html)
+mvn install:install-file -DpomFile=pom.xml -Dfile=../dist/lib/ProActive.jar
