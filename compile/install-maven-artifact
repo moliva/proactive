@@ -25,7 +25,7 @@ mvn install:install-file -Dfile=$LIB/felix.jar -DgroupId=org.apache.felix -Darti
 mvn install:install-file -Dfile=$LIB/fractal-adl-2.7-SNAPSHOT.jar -DgroupId=org.objectweb.fractal.fractaladl -DartifactId=fractal-adl -Dversion=2.7-SNAPSHOT -Dpackaging=jar
 mvn install:install-file -Dfile=$LIB/fractal-api-2.0.3-SNAPSHOT.jar -DgroupId=org.objectweb.fractal.fractalapi -DartifactId=fractal-api -Dversion=2.0.3-SNAPSHOT -Dpackaging=jar
 mvn install:install-file -Dfile=$LIB/glite-wms-jdlj.jar -DgroupId=glite-wms-jdlj -DartifactId=glite-wms-jdlj -Dversion=1.0 -Dpackaging=jar
-mvn install:install-file -Dfile=$LIB/ibis-1.4.jar -DgroupId=ibis -DartifactId=ibis -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/ibis-1.4.jar -DgroupId=ibis -DartifactId=ibis -Dversion=1.4 -Dpackaging=jar
 mvn install:install-file -Dfile=$LIB/ibis-connect-1.0.jar -DgroupId=ibis-connect -DartifactId=ibis-connect -Dversion=1.0 -Dpackaging=jar
 mvn install:install-file -Dfile=$LIB/ibis-util-1.0.jar -DgroupId=ibis-util -DartifactId=ibis-util -Dversion=1.0 -Dpackaging=jar
 mvn install:install-file -Dfile=$LIB/j-interop.jar -DgroupId=j-interop -DartifactId=j-interop -Dversion=1.0 -Dpackaging=jar
