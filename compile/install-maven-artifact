@@ -1,2 +1,73 @@
-# incorporate as part of the ant build (https://maven.apache.org/ant-tasks/examples/install-deploy.html)
-mvn install:install-file -DpomFile=pom.xml -Dfile=../dist/lib/ProActive.jar
+#!/bin/bash
+# set pseudo strict bash mode
+set -euo pipefail
+IFS=$'\n\t'
+
+LIB=../lib
+DIST=../dist/lib
+
+mvn install:install-file -Dfile=$LIB/batik-awt-util.jar -DgroupId=batik -DartifactId=batik-awt-util -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/batik-dom.jar -DgroupId=batik -DartifactId=batik-dom -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/batik-svggen.jar -DgroupId=batik -DartifactId=batik-svggen -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/batik-util.jar -DgroupId=batik -DartifactId=batik-util -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/batik-xml.jar -DgroupId=batik -DartifactId=batik-xml -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/bouncycastle.jar -DgroupId=org.bouncycastle -DartifactId=bouncycastle -Dversion=1.36 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/cimom.jar -DgroupId=cimom -DartifactId=cimom -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/cimrepository.jar -DgroupId=cimrepository -DartifactId=cimrepository -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/cog-jglobus-1.2.jar -DgroupId=cog-jglobus -DartifactId=cog-jglobus -Dversion=1.2 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/cog-ogce.jar -DgroupId=cog-ogce -DartifactId=cog-ogce -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/colobus-0.1.jar -DgroupId=colobus -DartifactId=colobus -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/commons-vfs-patched-2.0-SNAPSHOTr19199.jar -DgroupId=org.apache.commons -DartifactId=commons-vfs-patched -Dversion=2.0-SNAPSHOTr19199 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/cryptix-asn1.jar -DgroupId=cryptix-asn1 -DartifactId=cryptix-asn1 -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/cryptix.jar -DgroupId=cryptix -DartifactId=cryptix -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/cryptix32.jar -DgroupId=cryptix32 -DartifactId=cryptix32 -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/felix.jar -DgroupId=org.apache.felix -DartifactId=org.apache.felix.main -Dversion=2.1.0-SNAPSHOT -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/fractal-adl-2.7-SNAPSHOT.jar -DgroupId=org.objectweb.fractal.fractaladl -DartifactId=fractal-adl -Dversion=2.7-SNAPSHOT -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/fractal-api-2.0.3-SNAPSHOT.jar -DgroupId=org.objectweb.fractal.fractalapi -DartifactId=fractal-api -Dversion=2.0.3-SNAPSHOT -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/glite-wms-jdlj.jar -DgroupId=glite-wms-jdlj -DartifactId=glite-wms-jdlj -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/ibis-1.4.jar -DgroupId=ibis -DartifactId=ibis -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/ibis-connect-1.0.jar -DgroupId=ibis-connect -DartifactId=ibis-connect -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/ibis-util-1.0.jar -DgroupId=ibis-util -DartifactId=ibis-util -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/j-interop.jar -DgroupId=j-interop -DartifactId=j-interop -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/j-interopdeps.jar -DgroupId=j-interopdeps -DartifactId=j-interopdeps -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/jaxrpc.jar -DgroupId=jaxrpc -DartifactId=jaxrpc -Dversion=1.1 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/jdom.jar -DgroupId=jdom -DartifactId=jdom -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/julia-asm-2.5.3-SNAPSHOT.jar -DgroupId=julia-asm -DartifactId=julia-asm -Dversion=2.5.3-SNAPSHOT -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/julia-mixins-2.5.3-SNAPSHOT.jar -DgroupId=julia-mixins -DartifactId=julia-mixins -Dversion=2.5.3-SNAPSHOT -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/julia-runtime-2.5.3-SNAPSHOT.jar -DgroupId=julia-runtime -DartifactId=julia-runtime -Dversion=2.5.3-SNAPSHOT -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/moduleloader.jar -DgroupId=moduleloader -DartifactId=moduleloader -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/mofcomp.jar -DgroupId=mofcomp -DartifactId=mofcomp -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/osgi.jar -DgroupId=osgi -DartifactId=osgi -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/puretls.jar -DgroupId=puretls -DartifactId=puretls -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/saaj-impl.jar -DgroupId=saaj-impl -DartifactId=saaj-impl -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/servicebinder-0.9.0.jar -DgroupId=org.apache.felix -DartifactId=org.apache.felix.servicebinder -Dversion=0.9.0-SNAPSHOT -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/servlet-api.jar -DgroupId=servlet-api -DartifactId=servlet-api -Dversion=2.4 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/servlet.jar -DgroupId=servlet -DartifactId=servlet -Dversion=2.3.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/shellgui.jar -DgroupId=shellgui -DartifactId=shellgui -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/shellplugin.jar -DgroupId=shellplugin -DartifactId=shellplugin -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/shelltui-1.4.2.jar -DgroupId=shelltui -DartifactId=shelltui -Dversion=1.4.2 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/simple.jar -DgroupId=simple -DartifactId=simple -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/soap.jar -DgroupId=soap -DartifactId=soap -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/ssj.jar -DgroupId=ssj -DartifactId=ssj -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/sunxacml.jar -DgroupId=sunxacml -DartifactId=sunxacml -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/tablelayout.jar -DgroupId=tablelayout -DartifactId=tablelayout -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/trilead-ssh2.jar -DgroupId=trilead-ssh2 -DartifactId=trilead-ssh2 -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/uploader-0.9.0.jar -DgroupId=uploader -DartifactId=uploader -Dversion=0.9.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/vfs_s3.jar -DgroupId=vfs_s3 -DartifactId=vfs_s3 -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/vi-java.jar -DgroupId=vi-java -DartifactId=vi-java -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/vim.jar -DgroupId=vim -DartifactId=vim -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/vim25.jar -DgroupId=vim25 -DartifactId=vim25 -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/virtualbox-wsdl.jar -DgroupId=virtualbox-wsdl -DartifactId=virtualbox-wsdl -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/virtualization-core.jar -DgroupId=virtualization-core -DartifactId=virtualization-core -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/virtualization-hyperv-winrm.jar -DgroupId=virtualization-hyperv-winrm -DartifactId=virtualization-hyperv-winrm -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/virtualization-hyperv-wmi.jar -DgroupId=virtualization-hyperv-wmi -DartifactId=virtualization-hyperv-wmi -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/virtualization-libvirt.jar -DgroupId=virtualization-libvirt -DartifactId=virtualization-libvirt -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/virtualization-virtualbox.jar -DgroupId=virtualization-virtualbox -DartifactId=virtualization-virtualbox -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/virtualization-vmware-vi.jar -DgroupId=virtualization-vmware-vi -DartifactId=virtualization-vmware-vi -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/virtualization-vmware-vix.jar -DgroupId=virtualization-vmware-vix -DartifactId=virtualization-vmware-vix -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/virtualization-xenserver.jar -DgroupId=virtualization-xenserver -DartifactId=virtualization-xenserver -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/wbem.jar -DgroupId=wbem -DartifactId=wbem -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/winp-1.17-patched.jar -DgroupId=winp -DartifactId=winp -Dversion=1.17-patched -Dpackaging=jar
+mvn install:install-file -Dfile=$LIB/wiseman-tools.jar -DgroupId=wiseman-tools -DartifactId=wiseman-tools -Dversion=1.0 -Dpackaging=jar
+
+mvn install:install-file -DpomFile=pom.xml -Dfile=$DIST/ProActive.jar
