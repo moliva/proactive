@@ -1,4 +1,7 @@
-
+compile/.classpath
+compile/.project
+compile/.settings
+**/.DS_Store
 # /
 /.classpath
 /.project
